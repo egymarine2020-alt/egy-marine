@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>EgyMarine Photo Service</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed;
+    background-size: cover;
+    color: #f1f5f9;
+    margin: 0;
+    padding: 20px;
+    transition: direction 0.3s ease;
+  }
+
+  .container {
+    max-width: 500px;
+    margin: auto;
+    background-color: rgba(30, 41, 59, 0.85);
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    padding: 25px 30px;
+  }
+
+  .company-name {
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    color: #3b82f6;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  .lang-btns {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .lang-btns button {
+    background: #64748b;
+    color: #fff;
+    border: none;
+    padding: 8px 14px;
+    margin: 3px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .lang-btns button.active {
+    background: #3b82f6;
+  }
+
+  .card { display: none; }
+  .card.active { display: block; }
+
+  .section { margin-bottom: 18px; }
+
+  .section strong {
+    color: #fbbf24;
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  .btn {
+    display: block;
+    text-align: center;
+    background: #25D366;
+    color: white;
+    padding: 15px;
+    border-radius: 15px;
+    text-decoration: none;
+    font-size: 18px;
+    margin-top: 15px;
+    font-weight: bold;
+  }
+
+  /* ⭐ توقيع بسيط واحترافي */
+  .signature {
+    position: fixed;
+    bottom: 12px;
+    right: 12px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    color: rgba(255,255,255,0.65);
+    text-decoration: none;
+    letter-spacing: 0.5px;
+  }
+
+  .signature:hover {
+    color: #ffffff;
+  }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="company-name">EgyMarine</div>
+
+  <div class="lang-btns">
+    <button onclick="showLang('ar')" id="btn-ar">🇦🇪 العربية</button>
+    <button onclick="showLang('en')" id="btn-en">🇬🇧 English</button>
+    <button onclick="showLang('ru')" id="btn-ru">🇷🇺 Русский</button>
+    <button onclick="showLang('de')" id="btn-de">🇩🇪 Deutsch</button>
+    <button onclick="showLang('pl')" id="btn-pl">🇵🇱 Polski</button>
+  </div>
+
+  <!-- عربي -->
+  <div id="ar" class="card" dir="rtl">
+    <div class="section">
+      <strong>⏰ ميعاد ارسال اللينك</strong>
+      <p>اليوم التالي الساعة ١٠ مساءً</p>
+    </div>
+    <div class="section">
+      <strong>💾 الفلاشات والألبومات</strong>
+      <p>يتم الاتفاق على التسليم من خلال الواتس اب</p>
+    </div>
+    <div class="section">
+      <strong>🔗 رابط التحميل</strong>
+      <p>متاح لمدة 30 يوم</p>
+    </div>
+    <div class="section">
+      <strong>🎧 الدعم</strong>
+      <p>حل أي مشكلة خلال 24 ساعة</p>
+    </div>
+    <div class="section">
+      <strong>🔒 أمان بياناتك</strong>
+      <p>بياناتك محفوظة ولن يتم مشاركتها – أي خطأ سيتم إصلاحه فورًا</p>
+    </div>
+
+    <div class="section">
+      <strong>⚠️ مهم</strong>
+      <p>
+        في حالة تأخر إرسال الصور عن الموعد المحدد، يرجى الاتصال بنا،
+        ربما يكون هناك خطأ في البيانات
+      </p>
+    </div>
+
+    <div class="section">
+      <strong>💙 اطمئن</strong>
+      <p>صورك في أمان تام ويتم تجهيزها بأعلى جودة ✨</p>
+    </div>
+  </div>
+
+  <!-- English -->
+  <div id="en" class="card">
+    <div class="section">
+      <strong>⏰ Link Sending Time</strong>
+      <p>Next day by 10:00 PM</p>
+    </div>
+    <div class="section">
+      <strong>💾 Flash Drive / Album</strong>
+      <p>Delivery arranged via WhatsApp</p>
+    </div>
+    <div class="section">
+      <strong>🔗 Download Link</strong>
+      <p>Available for 30 days</p>
+    </div>
+    <div class="section">
+      <strong>🎧 Support</strong>
+      <p>Any issue resolved within 24 hours</p>
+    </div>
+    <div class="section">
+      <strong>🔒 Data Security</strong>
+      <p>Your files are safe – any error fixed immediately</p>
+    </div>
+
+    <div class="section">
+      <strong>⚠️ Important</strong>
+      <p>
+        If photos are delayed beyond the scheduled time,
+        please contact us as there may be an issue with the data
+      </p>
+    </div>
+
+    <div class="section">
+      <strong>💙 Don’t worry</strong>
+      <p>Your photos are handled with care and delivered in high quality ✨</p>
+    </div>
+  </div>
+
+  <a class="btn" href="https://wa.me/201070099814" target="_blank">
+    📞 Contact on WhatsApp
+  </a>
+
+</div>
+
+<!-- توقيع بسيط -->
+<a href="https://wa.me/201070099814" target="_blank" class="signature">
+  Mohamed Sadek
+</a>
+
+<script>
+function showLang(lang) {
+  const langs = ['ar','en','ru','de','pl'];
+
+  langs.forEach(l => {
+    const card = document.getElementById(l);
+    const btn = document.getElementById('btn-' + l);
+
+    if (card) card.classList.remove('active');
+    if (btn) btn.classList.remove('active');
+  });
+
+  const activeCard = document.getElementById(lang);
+  const activeBtn = document.getElementById('btn-' + lang);
+
+  if (activeCard) activeCard.classList.add('active');
+  if (activeBtn) activeBtn.classList.add('active');
+
+  document.body.style.direction = (lang === 'ar') ? 'rtl' : 'ltr';
+
+  localStorage.setItem('selectedLang', lang);
+}
+
+function detectLanguage() {
+  const saved = localStorage.getItem('selectedLang');
+  if (saved) return saved;
+
+  const lang = navigator.language || '';
+
+  if (lang.startsWith('ar')) return 'ar';
+  if (lang.startsWith('ru')) return 'ru';
+  if (lang.startsWith('de')) return 'de';
+  if (lang.startsWith('pl')) return 'pl';
+
+  return 'en';
+}
+
+window.onload = function() {
+  showLang(detectLanguage());
+};
+</script>
+
+</body>
+</html>
